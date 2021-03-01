@@ -6,7 +6,7 @@ class SendMailService {
   private client: Transporter;
   constructor() {
     nodemailer.createTestAccount().then(account => {
-      let transporter = nodemailer.createTransport({
+      const transporter = nodemailer.createTransport({
         host: account.smtp.host,
         port: account.smtp.port,
         secure: account.smtp.secure,
